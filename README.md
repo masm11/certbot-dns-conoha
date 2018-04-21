@@ -1,4 +1,4 @@
-# ConoHa DNS Authenticator Plugin for Certbot
+# ConoHa DNS Authenticator plugin for Certbot
 
 ## Installation
 
@@ -41,6 +41,9 @@ certbot certonly --preferred-challenge dns \
 		 --certbot-dns-conoha:dns-conoha-credentials /etc/letsencrypt/conoha.ini \
 		 -d Your-Domain
 ```
+
+If you want to get wildcard certs, you need also `--server https://acme-v02.api.letsencrypt.org/directory` for a while,
+because certbot's default acme server is not changed to v2 yet.
 
 If it succeeds, authenticator name and credentials file name are stored in `/etc/letsencrypt/renewal/Your-Domain.conf`.
 So, you need not specify these information when `renew`.
