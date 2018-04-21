@@ -44,3 +44,7 @@ certbot certonly --preferred-challenge dns \
 
 If it succeeds, authenticator name and credentials file name are stored in `/etc/letsencrypt/renewal/Your-Domain.conf`.
 So, you need not specify these information when `renew`.
+
+## License
+
+Apache License 2.0.
