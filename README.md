@@ -46,7 +46,7 @@ If you want to get wildcard certs, you need also `--server https://acme-v02.api.
 because certbot's default acme server is not changed to v2 yet.
 
 If it succeeds, authenticator name and credentials file name are stored in `/etc/letsencrypt/renewal/Your-Domain.conf`.
-So, you need not specify these information when `renew`.
+So, you need not specify these information when `renew`. (But I have not test that.)
 
 ## License
 
