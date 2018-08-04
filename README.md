@@ -1,5 +1,7 @@
 # ConoHa DNS Authenticator plugin for Certbot
 
+NOTE: This has nothing to do with one installed by `pip install certbot-dns-conoha`.
+
 ## Installation
 
 You need Python 3.6.
