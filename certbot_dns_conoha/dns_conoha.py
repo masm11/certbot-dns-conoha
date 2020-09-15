@@ -94,7 +94,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         })
         logger.debug('request:')
         logger.debug('%s', r.request.body)
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -117,7 +117,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         
         # Get DNSv1 URL.
         r = requests.get(dns_vers_url, headers={'Accept': 'application/json'})
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 300:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -139,7 +139,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         if domain[-1] != '.':
             domain = f'{domain}.'
         r = requests.get(dns_v1_url + '/domains', headers={'X-Auth-Token': token, 'Accept': 'application/json'})
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -169,7 +169,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         if name[-1] != '.':
             name = f'{name}.'
         r = requests.get(dns_v1_url + '/domains/' + domain_uuid + '/records', headers={'X-Auth-Token': token, 'Accept': 'application/json'})
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -196,7 +196,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         })
         logger.debug('request:')
         logger.debug('%s', r.request.body)
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -222,7 +222,7 @@ class Authenticator(dns_common.DNSAuthenticator):
         logger.debug('request:')
         logger.debug('%s', r.request.body)
         
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             logger.debug('%s', r.json())
@@ -237,7 +237,7 @@ class Authenticator(dns_common.DNSAuthenticator):
             'Accept': 'application/json',
         })
         
-        print(r.status_code)
+        #print(r.status_code)
         if r.status_code != 200:
             logger.debug('%s', r.content)
             raise RuntimeError('It failed to delete resource record.')
